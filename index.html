@@ -44,32 +44,36 @@
                 font-size: 3.5rem;
             }
         }
+
+        .background-accent {
+            background-color: #c0392b !important;
+        }
     </style>
     <!-- Custom styles for this template -->
     <link href="product.css" rel="stylesheet">
 </head>
 <body style="background-color:#e74c3c">
-    <nav class="site-header sticky-top py-1" style="background-color: #c0392b">
+    <nav class="site-header sticky-top py-1 background-accent">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
             <a class="py-2" href="#" aria-label="Product">
                 <img src="logo_top.png" class="im-fluid" width="110">
-           
+
                 <span class="text-white font-weight-bold"> - O Aplicativo gratuito para seu Delivery</span>
-           
+
                 <!--<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10" /><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" /></svg>-->
             </a>
-			
-            <a class="py-2 d-none d-md-inline-block text-white" href="#">Home</a>
-            <!--<a class="py-2 d-none d-md-inline-block" href="#">Product</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>-->
+
+            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="#">Início</a>
+            <a class="py-2 d-none d-md-inline-block text-white" href="#videos">Videos</a>
         </div>
     </nav>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" style="background-color: #c0392b">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center background-accent">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <!--<h1 class="display-4 font-weight-normal" style="color: white">PluzApp</h1>-->
 
@@ -88,24 +92,28 @@
         </div>
     </div>
 
-    <!--<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" id="videos">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden background-accent">
             <div class="my-3 py-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
+                <h2 class="display-5">Apresentação</h2>
+                <p class="lead">Veja nosso video promocional.</p>
             </div>
-            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div class="shadow-sm mx-auto embed-responsive embed-responsive-16by9 background-accent" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/--ZU67k9uF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden background-accent">
             <div class="my-3 p-3">
-                <h2 class="display-5">Another headline</h2>
-                <p class="lead">And an even wittier subheading.</p>
+                <h2 class="display-5 text-white">Videos Tutoriais</h2>
+                <p class="lead text-white">Saiba como começar no PluzApp.</p>
             </div>
-            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+            <div class="shadow-sm mx-auto embed-responsive embed-responsive-16by9 background-accent" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLhGgtg014MxF_tGoyZMYF3q9-McSCVHLP" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <!--<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
                 <h2 class="display-5">Another headline</h2>
@@ -198,5 +206,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
     <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
 </body>
 </html>
