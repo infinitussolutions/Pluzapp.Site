@@ -86,94 +86,52 @@ carteira de fidelização virtual.
     </nav>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <h2 class="text-white text-center">Planos de Assinatura Mensal</h2>
+        <h2 class="text-white text-center">Contato para Planos Prime e Prime Fidelidade</h2>
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-        <div class="col-sm">
-            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden bg-primary">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-primary">
+        <div class="col-sm text-center">
+            <div class="row text-center">
+                <div class="col-sm">
+                </div>
+                <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden bg-primary">
+                    <section class="content">
+                        <div class="contato">
+                            <h3>Preencha o Formulário</h3>
+                            <h6>Faremos o contato o quanto antes</h6><br />
+                            <form method="post" action="../Contact/processa.php">
 
-                <div class="my-3 p-3">
-                    <h6 class="text-white text-center">Obrigado por demonstrar seu interesse. Escreva pra gente em caso de dúvidas.</h6>
-                </div>
-                <div class="row text-center">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm flex-md-equal my-md-3 pl-md-3">
-                        <div class="col-sm">
-                            <label class="fieldLabel text-white">Nome? *</label>
-                            <input type="text" value="" name="1" class="form-control" placeholder="Digite seu Nome aqui" />
+                                <input type="text" value="" name="name" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
+                                <input type="text" value="" name="enterprisename" id="2" class="form-control" placeholder="Nome da Empresa" max="30"  /><br />
+                                <input type="tel" value="" name="phone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
+                                <input type="email" value="" name="email" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
+                                <textarea class="field col-auto" name="message" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br />
+                                <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">
+                                    <span><span>Enviar</span></span>
+                                </button><br /><br />
+                                <label>* Itens obrigatórios para o envio</label>
+                            </form>
+                            <script>
+                                (function () {
+                                    'use strict';
+                                    window.addEventListener('load', function () {
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        var validation = Array.prototype.filter.call(forms, function (form) {
+                                            form.addEventListener('submit', function (event) {
+                                                if (form.checkValidity() === false) {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                }
+                                                form.classList.add('was-validated');
+                                            }, false);
+                                        });
+                                    }, false);
+                                })();
+                            </script>
                         </div>
-                    </div>
-                    <div class="col-sm">
-                    </div>
+                    </section>
                 </div>
-                <div class="row text-center">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm flex-md-equal my-md-3 pl-md-3">
-                        <div class="col-sm">
-                            <label class="fieldLabel text-white">Nome da empresa?</label>
-                            <input type="text" value="" name="2" class="form-control" placeholder="Digite o nome da empresa, caso tenha uma, aqui" />
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm flex-md-equal my-md-3 pl-md-3">
-                        <div class="col-sm">
-                            <label class="fieldLabel text-white">Telefone: *</label>
-                            <input type="text" value="" name="5" class="form-control" placeholder="Telefone, com WhatsApp, para falicitar o contato" />
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm flex-md-equal my-md-3 pl-md-3">
-                        <div class="col-sm">
-                            <label class="fieldLabel text-white">E-mail:</label>
-                            <input type="text" value="" name="6" class="form-control" placeholder="E-mail para contato, caso tenha" />
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm flex-md-equal my-md-3 pl-md-3">
-                        <div class="col-sm">
-                            <label class="fieldLabel text-white">Observações:</label>
-                            <input type="text" value="" name="7" class="form-control" placeholder="Digite sua observação aqui" />
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                    </div>
-                </div>
-
-                <div class="row text-center">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm flex-md-equal my-md-3 pl-md-3">
-                        <div class="col-sm">
-                            <button type="submit" class="cui-Button cui-Button-positive" id="submitButton">
-                                <span><span>Enviar</span></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                    </div>
-                </div>
-
-
-                <div class="my-3 p-3">
-                    <h6 class="text-white text-center">* Obrigatórios para que façamos contato.</h6>
+                <div class="col-sm">
                 </div>
             </div>
         </div>
