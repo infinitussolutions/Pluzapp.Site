@@ -22,6 +22,14 @@
     <!-- Recaptcha Google -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            grecaptcha.render('html_element', {
+                'sitekey': '6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx'
+            });
+        };
+    </script>
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -98,7 +106,7 @@
                                                                          <input type="email" value="" name="e-mail" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
                                                                          <textarea class="field col-auto" name="Mensagem" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br /><p />
                                                                          <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">Enviar</button><p />
-                                                                         <div class="g-recaptcha mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden bg-primary" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div><p />
+                                                                         <div id="html_element" class="g-recaptcha mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden bg-primary" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div><p />
 
                                                                      </form>
 
