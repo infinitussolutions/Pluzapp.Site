@@ -19,6 +19,9 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <!-- Recaptcha Google -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -88,36 +91,21 @@
                         <div class="contato">
                             <h3>Preencha o Formulário</h3>
                             <h6>Faremos o contato o quanto antes</h6><br />
-                            <form method="post" action="./Contact/processa.php">
+                            <form action="https://formspree.io/mknqkjnr" method="POST">
+                                <input type="text" value="" name="Nome" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
+                                <input type="text" value="" name="Empresa" id="2" class="form-control" placeholder="Nome da Empresa" max="30" /><br />
+                                <input type="tel" value="" name="Telefone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
+                                <input type="email" value="" name="e-mail" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
+                                <textarea class="field col-auto" name="Mensagem" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br /><p />
+                                <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">Enviar</button><p />
 
-                                <input type="text" value="" name="name" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
-                                <input type="text" value="" name="enterprisename" id="2" class="form-control" placeholder="Nome da Empresa" max="30"  /><br />
-                                <input type="tel" value="" name="phone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
-                                <input type="email" value="" name="email" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
-                                <textarea class="field col-auto" name="message" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br />
-                                <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">
-                                    <span><span>Enviar</span></span>
-                                </button><br /><br />
-                                <label>* Itens obrigatórios para o envio</label>
                             </form>
-                            <script>
-                                (function () {
-                                    'use strict';
-                                    window.addEventListener('load', function () {
-                                        var forms = document.getElementsByClassName('needs-validation');
-                                        var validation = Array.prototype.filter.call(forms, function (form) {
-                                            form.addEventListener('submit', function (event) {
-                                                if (form.checkValidity() === false) {
-                                                    event.preventDefault();
-                                                    event.stopPropagation();
-                                                }
-                                                form.classList.add('was-validated');
-                                            }, false);
-                                        });
-                                    }, false);
-                                })();
-                            </script>
+
+                            <label>* Itens obrigatórios para o envio</label><p />
+                            <label>Powered by Formspree.io</label>
+
                         </div>
+                        <div class="g-recaptcha bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden bg-primary" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div>
                     </section>
                 </div>
                 <div class="col-sm">
