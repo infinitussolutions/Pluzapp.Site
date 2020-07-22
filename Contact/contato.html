@@ -97,15 +97,16 @@
                         <div class="contato">
                             <h3>Preencha o Formulário</h3>
                             <h6>Faremos o contato o quanto antes</h6><br />
-                            <form id="html_element" action="https://formspree.io/mknqkjnr" method="POST">
-                                <input type="text" value="" name="Nome" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
-                                <input type="text" value="" name="Empresa" id="2" class="form-control" placeholder="Nome da Empresa" max="30" /><br />
-                                <input type="tel" value="" name="Telefone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
-                                <input type="email" value="" name="e-mail" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
-                                <textarea class="field col-auto" name="Mensagem" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br /><p />
-                                <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">Enviar</button><p />
-                                <div class="g-recaptcha col-sm text-center" data-theme="dark" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div><p />
-                            </form>
+                                                                     <form id="html_element" action="https://formspree.io/mknqkjnr" method="POST">
+                                                                         <input type="text" value="" name="Nome" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
+                                                                         <input type="text" value="" name="Empresa" id="2" class="form-control" placeholder="Nome da Empresa" max="30" /><br />
+                                                                         <input type="tel" value="" name="Telefone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
+                                                                         <input type="email" value="" name="e-mail" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
+                                                                         <textarea class="field col-auto" name="Mensagem" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br /><p />
+                                                                         <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">Enviar</button><p />
+                                                                         <div class="g-recaptcha col-sm text-center" data-theme="dark" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div><p />
+                                                                         <input type="hidden" name="_language" value="es" />
+                                                                     </form>
                             <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
                                     async defer>
                             </script>
