@@ -163,23 +163,6 @@
     <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
     <script src="https://embed.small.chat/TENE9LUV9GFC8C2SHH.js" async></script>
     <script src='https://www.google.com/recaptcha/api.js?hl=pt-br'></script>
-    <script type="text/javascript">
-        let form = document.querySelector('#html_element');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            let name = document.querySelector('#name');
-            let tel = document.querySelector('#tel');
-            if (!name.value || !tel.value) {
-                alert('Nome e Email são Obrigatorios');
-
-            } else {
-                grecaptcha.execute();
-            }
-        });
-
-        function checkForm() { }
-    </script>
 
 </body>
 </html>
