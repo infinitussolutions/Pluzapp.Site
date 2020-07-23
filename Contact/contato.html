@@ -95,16 +95,16 @@
                         <div class="contato">
                             <h3>Preencha o Formulário</h3>
                             <h6>Faremos o contato o quanto antes</h6><br />
-                                                                     <form id="html_element" action="https://formspree.io/mknqkjnr" method="POST">
-                                                                         <input type="text" value="" name="Nome" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
-                                                                         <input type="text" value="" name="Empresa" id="2" class="form-control" placeholder="Nome da Empresa" max="30" /><br />
-                                                                         <input type="tel" value="" name="Telefone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
-                                                                         <input type="email" value="" name="e-mail" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
-                                                                         <textarea class="field col-auto" name="Mensagem" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br /><p />
-                                                                         <div class="g-recaptcha col-sm text-center" data-theme="dark" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div><p />
-                                                                         <button type="submit" class="field col-auto" id="submitButton" onclick="return checkForm()">Enviar</button><p />
-                                                                         <input type="hidden" name="_language" value="pt-BR" />
-                                                                     </form>
+                            <form id="html_element" action="https://formspree.io/mknqkjnr" method="POST">
+                                <input type="text" value="" name="Nome" id="1" class="form-control" placeholder="Nome *" required onfocus="this.value = '';" onblur="if (this.value == '') { this.value = ''; }" /><br />
+                                <input type="text" value="" name="Empresa" id="2" class="form-control" placeholder="Nome da Empresa" max="30" /><br />
+                                <input type="tel" value="" name="Telefone" id="3" class="form-control" placeholder="Telefone *" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" /><br />
+                                <input type="email" value="" name="e-mail" id="4" class="form-control" placeholder="E-mail para Contato" max="30" /><br />
+                                <textarea class="field col-auto" name="Mensagem" id="5" rows="5" cols="50" placeholder="Sua mensagem aqui" max="100"></textarea><br /><p />
+                                <div class="g-recaptcha col-sm text-center" data-theme="dark" data-sitekey="6Lf1orQZAAAAABcdxPAX4J_Gt8GHJlrmgUNIEMnx"></div><p /><p />
+                                <button type="submit" class="field col-sm" id="submitButton" onclick="return checkForm()">Enviar</button><p />
+                                <input type="hidden" name="_language" value="pt-BR" />
+                            </form>
                             <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
                                     async defer>
                             </script>
@@ -163,7 +163,25 @@
     <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
     <script src="https://embed.small.chat/TENE9LUV9GFC8C2SHH.js" async></script>
     <script src='https://www.google.com/recaptcha/api.js?hl=pt-br'></script>
+    <script type="text/javascript">
+        let form = document.querySelector('#html_element');
 
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            let name = document.querySelector('#name');
+            let tel = document.querySelector('#tel');
+            if (!name.value || !tel.value) {
+                alert('Nome e Email são Obrigatorios');
+
+            } else {
+                grecaptcha.execute();
+            }
+        });
+
+        function sendForm() {
+            alert("Passou");
+        }
+    </script>
 
 </body>
 </html>
