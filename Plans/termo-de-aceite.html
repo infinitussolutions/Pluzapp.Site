@@ -3,32 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Conectamos pessoas a negócios
-Aplicativo que conecta clientes aos negócios mais próximos
-
-Organizamos suas vendas montando sua loja dentro do aplicativo (com galeria de fotos, descrição
-do produto, preços, descontos, promoções e taxa de entrega) e escalamos seu negócio criando uma
-carteira de fidelização virtual.
-
--  Menores taxas: Acesso gratuito à um aplicativo de vendas
--  Fidelização de clientes: Carteira fidelidade virtual
--  Contato próximo com seus clientes: Notificações de promoções
-- Gerenciamento de pedidos: Acompanhamento dos status dos pedidos pela empresa e pelo cliente
-- Segurança para saúde: Entregas locais higienizadas">
+    <meta name="description" content="Conecta clientes aos negócios mais próximos. Organiza suas vendas na loja dentro do app e escala seu negócio com carteira de fidelização virtual">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>PluzApp - App de comida, produtos, serviços e entregas 🤝</title>
+    <title>PluzApp - Aplicativo de Delivery e Take Away para Comidas, Serviços e Produtos 🤝</title>
 
     <link rel="canonical" href="https://pluzapp.com.br/">
 
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP E CSS-->
 
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/6d131e63af.js" crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- ESTILOS PARA ESTA PÁGINA -->
+    <!-- Nesse caso, este estilo é apenas para inserir imagens -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- JAVASCRIPT E JQUERY -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -39,7 +35,6 @@ carteira de fidelização virtual.
     <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
     <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
-
 
     <style>
         .bd-placeholder-img {
@@ -61,29 +56,56 @@ carteira de fidelização virtual.
             background-color: #c0392b !important;
         }
     </style>
+    <!-- Custom styles for this template -->
     <link href="product.css" rel="stylesheet">
 </head>
+
 <body style="background-color:#e74c3c">
-    <nav class="site-header sticky-top py-1 bg-primary">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2" href="#" aria-label="Product">
-                <img src="../logo_top.png" class="im-fluid" width="110">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark site-header sticky-top py-1 bg-primary">
 
-                <span class="text-white font-weight-bold"></span>
-            </a>
+        <!-- Navbar brand -->
+        <a class="navbar-brand col-md-8" href="#" aria-label="Product">
+            <img src="../logo_top.png" class="im-fluid" width="110">
+            <span class="text-white font-weight-bold"></span>
+        </a>
 
-            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
-            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
-            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
-            <a class="py-2 d-none d-md-inline-block text-white" href="#"></a>
+        <div class="container col-md-8">
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <a class="py-2 d-none d-md-inline-block text-white" href="../index.html">Início</a>
-            <a class="py-2 d-none d-md-inline-block text-white" href="../Tutorials/tutoriais.html">Tutoriais</a>
-            <a class="py-2 d-none d-md-inline-block text-white" href="../Faq/faq.html">FAQ</a>
-            <a class="py-2 d-none d-md-inline-block text-white" href="../Plans/planos.html">Planos</a>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="menuNav">
 
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Tutorials/tutoriais.html">Tutoriais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Faq/faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../Plans/planos.html">Planos</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+
+                </ul>
+                <!-- Links -->
+
+
+            </div>
         </div>
+
     </nav>
+    <!--/.Navbar-->
 
     <div class="row p-3 p-md-5 m-md-3 bg-primary text-white">
         <div class="col-md-12">
